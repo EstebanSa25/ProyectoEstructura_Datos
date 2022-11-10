@@ -42,8 +42,12 @@ public class Proyecto_Estructura {
                    JOptionPane.showMessageDialog(null,"Medicamentos disponibles: "+_medicamentos.Medicamentos);
                    break;
                case 4:
+                   if(_medicamentos.Medicamentos.size()==0){
+                    JOptionPane.showMessageDialog(null,"No se ha registrado ningun medicamento en el sistema");
+                   }else{
                    _pacientes.IngresarMedicamentos(_medicamentos.Medicamentos);
                    _pacientes.AgregarPaciente(_pacientes.getNombre(),_pacientes.getMedicinas());
+                   }
                    break;
                case 5:
                JOptionPane.showMessageDialog(null,_pacientes.Medicinas);
